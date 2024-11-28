@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirige todas las solicitudes al app/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ app/index.php [QSA,L]
